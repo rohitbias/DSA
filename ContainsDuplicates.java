@@ -43,7 +43,6 @@ class ContainsDuplicates {
             }
             names.add(name[i]);
         }
-
         return false;
     }
 }
