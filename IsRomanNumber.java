@@ -53,10 +53,12 @@ public class IsRomanNumber {
         mp.put('C', 100);
         mp.put('D', 500);
         mp.put('M', 1000);
-
+        // initially keep last element in the result.
         int result = mp.get(romanString.charAt(romanString.length() - 1));
+        // Compare the 2nd last element with the last element and if its greater then
+        // add if less then subtract.
         for (int i = romanString.length() - 2; i >= 0; i--) {
-            if (mp.get(romanString.charAt(i)) < mp.get(romanString.charAt(i+1))) {
+            if (mp.get(romanString.charAt(i)) < mp.get(romanString.charAt(i + 1))) {
                 result = result - mp.get(romanString.charAt(i));
             } else
                 result = result + mp.get(romanString.charAt(i));
@@ -66,3 +68,6 @@ public class IsRomanNumber {
     }
 
 }
+
+// Time Complexity: O(N)
+// Space Complexity:O(1)
