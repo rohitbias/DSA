@@ -9,8 +9,8 @@ import java.util.Arrays;
 
 public class BinarySearch {
     public static void main(String[] args) {
-        int[] num = { 13, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-        int number = 13;
+        int[] num = { 1, 3, 4, 5, 7, 8, 9,13 };
+        int number = 6;
         Arrays.sort(num);// this will sort the array
         System.out.println(binaryNumberSearch(num, number));
 
@@ -30,7 +30,7 @@ public class BinarySearch {
             else
                 end = mid - 1;
         }
-        return -1;
+        return start;//start (if we want to find the missing number has to be entered at which index)
     }
     // Time Complexity: O(N)    
     // Auxiliary Space: O(1)
