@@ -1,3 +1,4 @@
+
 /*Given a string containing just the characters '(' and ')', return the length of the 
 longest valid (well-formed) parentheses substring
 
@@ -15,6 +16,7 @@ Example 3:
 Input: s = ""
 Output: 0 
 */
+import java.util.Stack;
 
 public class LongestValidParenthesis {
     public static void main(String[] args) {
@@ -52,7 +54,7 @@ public class LongestValidParenthesis {
         // bracket
         left = 0;
         right = 0;
-        for (int i = str.length()-1; i >= 0; i--) {
+        for (int i = str.length() - 1; i >= 0; i--) {
             if (str.charAt(i) == '(')
                 left++;
             else
@@ -62,6 +64,30 @@ public class LongestValidParenthesis {
             else if (left > right) {
                 left = 0;
                 right = 0;
+            }
+        }
+        return max;
+    }
+
+    /*
+     * Approach 2: By using stack
+     * We will maintain the index in the stack
+     * if we have opening bracked push the element
+     * if not pop the stack and check if the pop has made stack empty if yes update the index in the stack.
+     */
+    public static int maxValidParenthesisByStack(String str) {
+        Stack<Integer> stack = new Stack<Integer>();
+        int max = 0;
+        stack.push(-1);// starting condition as a marker when we do not have any element in the stack.
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == '(') {
+                stack.push(i);// insterted the value to the stack
+            } else {
+                stack.pop();
+                if (stack.empty()) {// if the above pop has made stack empty
+                    stack.push(i);
+                }
+                max = Math.max(max, i - stack.peek());
             }
         }
         return max;
