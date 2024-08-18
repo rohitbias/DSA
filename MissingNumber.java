@@ -31,15 +31,15 @@ public class MissingNumber {
     // The result of XOR of similar element is zero.
 
     public static int missingNumberXOR(int[] num) {
-        int xor1 = num[0];
+        int result = num[0];
         for (int i = 1; i < num.length; i++) {
-            xor1 = xor1 ^ num[i];
+            result = result ^ num[i]; // The result of XOR of similar element is zero.
         }
-        int xor2 = 1;
+        int result2 = 1;
         for (int i = 2; i <= num.length + 1; i++)// as there is one number which is missing
         {
-            xor2 = xor2 ^ i;
+            result2 = result2 ^ i;
         }
-        return xor1 ^ xor2;
+        return result ^ result2;
     }
 }
