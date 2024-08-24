@@ -6,9 +6,7 @@ class ProductExceptSelf {
         int[] result = productExceptSelf1(num);
         for (int i : result)
             System.out.print(i + ",");
-
     }
-
     public static int[] productExceptSelf(int[] num) {
         /*
          * Approach 1: Multiply all the element in an array and store in a result
@@ -26,7 +24,6 @@ class ProductExceptSelf {
         }
         return num;
     }
-
     public static int[] productExceptSelf1(int[] num) {
         /*
          * Approach 2: Here we can use prefix and suffix

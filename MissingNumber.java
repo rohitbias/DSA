@@ -4,7 +4,6 @@
  * 
  * XOR--> If both number are different the result is 1 else 0
  */
-
 public class MissingNumber {
 
     public static void main(String[] args) {
@@ -12,7 +11,6 @@ public class MissingNumber {
         System.out.println(missingNumberXOR(num));
 
     }
-
     // Approach 1: In this approach Integer overflow may occur if we have long
     // range.
     // Time Complexity O(N) and space Complexity is O(1)

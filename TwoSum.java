@@ -1,4 +1,3 @@
-
 /*
  * int[] a= [2,3,9,6]
  * target= 8
@@ -16,7 +15,6 @@ public class TwoSum {
             System.out.println(result[i]);
         }
     }
-
     public static int[] indicesTwoSum(int[] a, int target) {
         // Approach 1: make 2 pointer i and j, find remainder (target - a[i]) in j if
         // found return the index else increase the count and iterate until found;
@@ -32,7 +30,6 @@ public class TwoSum {
         }
         return null;
     }
-
     public static int[] indicesTwoSum1(int[] num, int target) {
         // Approach 2: Take a Map of value and index, insert the value in the map and
         // if the remainder is found as a key in the map return the value of the index

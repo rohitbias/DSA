@@ -5,6 +5,8 @@
  * if num[midindex]<number; start= mid+1 index else end = midindex-1
  */
 
+
+
 import java.util.Arrays;
 
 public class BinarySearch {
@@ -30,7 +32,7 @@ public class BinarySearch {
             else
                 end = mid - 1;
         }
-        return start;//start (if we want to find the missing number has to be entered at which index)
+        return start; //start (if we want to find the missing number has to be entered at which index)
     }
     // Time Complexity: O(N)    
     // Auxiliary Space: O(1)
@@ -39,6 +41,7 @@ public class BinarySearch {
         {
             if(n[i]==searchNumber)
             return i;
+            break;
         }
         return -1;
     }
