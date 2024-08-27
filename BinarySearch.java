@@ -39,10 +39,8 @@ public class BinarySearch {
     // Auxiliary Space: O(1)
     public static int linearNumberSearch(int[] n, int searchNumber) {
         for (int i = 0; i < n.length; i++) {
-            if (n[i] == searchNumber) {
+            if (n[i] == searchNumber)
                 return i;
-                break;
-            }
         }
         return -1;
     }
